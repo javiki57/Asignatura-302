@@ -1,0 +1,170 @@
+Qué significado especial tiene en las expresiones regulares el símbolo: |
+	Representa la interseccion de expresiones regulares
+	Ignora el resto de la línea
+Correcta 	Representa la disyuncion de expresiones regulares
+	Representa la concatenacion.
+
+ 
+
+Solución a la pregunta número 2
+Señalar la cadenas de caracteres que NO se reconoce mediante la expresion regular: (b+a)*b
+Incorrecta 	bbbab
+Correcta 	ababab
+	b
+
+ 
+
+Solución a la pregunta número 3
+En las expresiones regulares, ¿que significado tiene el caracter punto (fuera de los corchetes)?
+Correcta 	Cualquier caracter excepto el fin de linea.
+	Cualquier caracter.
+	Cualquier cadena de caracteres no vacia.
+	Solo tiene significado especial dentro de los corchetes, fuera de estos representa al mismo caracter punto.
+
+ 
+
+Solución a la pregunta número 4
+Indicar cuales de los siguientes lexemas son reconocidos integramente por la siguiente expresión regular LEX:
+
+0|[^0][0-9]*
+
+Correcta 	X07
+	007
+Correcta 	7
+Correcta 	1007
+
+ 
+
+Solución a la pregunta número 5
+¿Cual de las siguientes expresiones regulares acepta todos los números naturales pares (incluyendo el 0)?
+	
+
+0|[1-9][0-9]*[02468]
+
+	
+
+0|[1-9][02468]*|[02468]
+
+	
+
+0|[1-9][02468]*
+
+
+Correcta 	[02468]|[1-9][0-9]*[02468]
+
+	
+
+[02468]+
+
+Incorrecta 	0|[1-9][02468]+
+
+
+ 
+
+Solución a la pregunta número 6
+Qué significado especial tiene en las expresiones regulares el símbolo: $
+Correcta 	Reconoce sólo los lexemas que estan al final de una linea
+	Representa a cualquier caracter
+	Ignora el resto de la línea
+
+ 
+
+Solución a la pregunta número 7
+¿A qué otra expresion regular es equivalente: [a+z]
+	
+
+a+z
+
+	
+
+(a|z)
+
+	Ninguna de las demás respuestas es correcta
+
+
+Correcta 	(a|\+|z)
+
+
+ 
+
+Solución a la pregunta número 8
+Sea la expresion regular
+
+ .*[aeiou][aeiou].* 
+
+Señalar cual de las siguientes entencias describe mejor los lexemas reconocidos por esta expresion.
+	Palabras que contienen dos vocales seguidas, pero ni empiezan ni acaban en vocal
+	Dos vocales seguidas dentro de un comentario
+Correcta 	Las lineas de texto que contienen dos vocales seguidas
+	Palabras que contienen dos vocales.
+
+ 
+
+Solución a la pregunta número 9
+¿A qué otra expresion regular es equivalente: (bb)*b
+	Ninguna de las demás respuestas es correcta
+	
+
+bb+
+
+	
+
+bbb*
+
+Correcta 	b(bb)*
+
+
+ 
+
+Solución a la pregunta número 10
+Cual de las siguientes igualdades es cierta
+	ab = ba
+	(ab)* = (ba)*
+Correcta 	(a | b) = (b | a)
+	a*b* = b*a*
+
+ 
+
+Solución a la pregunta número 11
+¿Cual es el operador que se utiliza para indicar que una expresion regular debe repetirse al menos una o mas veces?
+	*
+Correcta 	+
+	$
+	?
+	{1,n}
+	^
+
+ 
+
+Solución a la pregunta número 12
+Sea T el conjunto de todos los caracteres ASCII del 1 al 127. Para expresar el conjunto de todas las cadenas que pueden formarse con los simbolos de T, puede usarse la expresion:
+NOTA: Se asume que el EOF es el carácter de código 0 y que sólo aparece una vez al final del fichero
+	[.]*
+Correcta 	(.|\n|\r)*
+	[a-zA-Z0-9]*
+	.*
+
+ 
+
+Solución a la pregunta número 13
+Señalar la expresion regular equivalente a : b(ab)*a
+Correcta 	ba(ba)*
+	(ba)*
+	(ba|ab)*
+
+ 
+
+Solución a la pregunta número 14
+Cual de las siguientes igualdades es cierta
+	(ab)* = a*b*
+Correcta 	(a* | b*)* = (a | b)*
+Incorrecta 	(a | b)* = a* | b*
+
+ 
+
+Solución a la pregunta número 15
+La expresion regular a*a* es equivalente a:
+	aa*
+Correcta 	a*
+	(aa)*
+	aa+

@@ -1,0 +1,5 @@
+1.) jflex Sumalex.lex
+
+2.) javac *.java
+
+3.) java Main test.txt
