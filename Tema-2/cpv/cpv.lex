@@ -1,10 +1,27 @@
 
-%%
 
 %%
+%int
 
-[a-zA-Z]+[aeiou][aeiou][a-zA-Z]+        // A
+Palabra     = [a-zA-Z]
+Vocal       = [aeiouAEIOU]
+Consonante  = [b-df-hj-np-tv-zB-DF-HJ-NP-TV-Z]
 
-[a-zA-Z]+[aeiou]            //B
+%%
 
-[a-zA-Z]+[^aeiou]            //C
+/* Tipo C */ 
+{Palabra}*{Vocal}{Vocal}+{Palabra}*{Consonante}+        {cpv.C++;}
+
+/* Tipo A */
+{Palabra}*{Vocal}{Vocal}+{Palabra}*                {cpv.A++;}
+
+/*Tipo B */
+
+{Palabra}*{Vocal}+                                 {cpv.B++;}
+
+/*Tipo D*/
+
+{Palabra}*{Consonante}+                            {cpv.D++;}
+
+/* Todo lo demás */
+[^]						   {/* Ignorar */}
