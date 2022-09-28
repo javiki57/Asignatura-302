@@ -1,10 +1,10 @@
 public class Yytoken {
   
-  public final static int TOKEN_CTE_ENTERO = 257;
-  public final static int TOKEN_CTE_ENTERO_LARGO = 258;
-  public final static int TOKEN_CTE_REAL_CORTO = 259;
-  public final static int TOKEN_CTE_REAL_LARGO = 260;
-  public final static int TOKEN_ERROR = 261;
+  public final static int TOKEN_CTE_ENTERO = 50;
+  public final static int TOKEN_CTE_ENTERO_LARGO = 51;
+  public final static int TOKEN_CTE_REAL_CORTO = 52;
+  public final static int TOKEN_CTE_REAL_LARGO = 53;
+  public final static int TOKEN_ERROR = 54;
 
   private int token;
   private String lexema;
