@@ -12,23 +12,31 @@
 
 <YYINITIAL> {
 
+  (\/\/)          {yybegin(LINE);}
 
+  (\/\*\*)        {yybegin(LINE2);}
+
+  (\/\*)          {yybegin(BLOCK);}
+
+  [^]   { }
 }
 
 
 <LINE> {
     
-
+  [^]   { }
 }
 
 
 <LINE2> {
 
+ [^]   { }
 
 }
 
 
 <BLOCK> {
 
+ [^]   { }
 
 }
