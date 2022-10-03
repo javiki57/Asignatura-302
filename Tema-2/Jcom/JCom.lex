@@ -12,11 +12,13 @@
 
 <YYINITIAL> {
 
-  (\/\/)          {yybegin(LINE);}
+  \/\/            {yybegin(LINE);}
 
-  (\/\*\*)        {yybegin(LINE2);}
+  \/\*\*          {yybegin(LINE2);}
 
-  (\/\*)          {yybegin(BLOCK);}
+  \/\*            {yybegin(BLOCK);}
+
+  \"[^]*\"        { }
 
   [^]             { }
 }
@@ -24,26 +26,30 @@
 
 <LINE> {
   
-  [^\t\n\r\ ]+      {JCom.line++;}
+  [^\t\n\r\ ]      {JCom.line++;}
 
-  \n                {yybegin(YYINITIAL);}
+  \n               {yybegin(YYINITIAL);}
 
-  [^]               { }
+  [^]              { }
 }
 
 
 <LINE2> {
+  
+  [^\t\n\r\ ]      {JCom.line2++;} 
 
-  (\*\/)            {yybegin(YYINITIAL);}
+  \*\/             {yybegin(YYINITIAL);}
 
-  [^]   { }
+  [^]              { }
 
 }
 
 
 <BLOCK> {
+  
+  [^\t\n\r\ ]      {JCom.block++;}
 
-  (\*\/)            {yybegin(YYINITIAL);}
+  \*\/             {yybegin(YYINITIAL);}
 
   [^]   { }
 

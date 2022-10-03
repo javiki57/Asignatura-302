@@ -19,8 +19,8 @@ public class JCom {
         }
 
         System.out.println("//  " + line);
-        System.out.println("/*  " + line2);
-        System.out.println("/** " + block);
+        System.out.println("/*  " + block);
+        System.out.println("/** " + line2);
 
 
       } catch (IOException e) {
