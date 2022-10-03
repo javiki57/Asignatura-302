@@ -18,25 +18,33 @@
 
   (\/\*)          {yybegin(BLOCK);}
 
-  [^]   { }
+  [^]             { }
 }
 
 
 <LINE> {
-    
-  [^]   { }
+  
+  [^\t\n\r\ ]+      {JCom.line++;}
+
+  \n                {yybegin(YYINITIAL);}
+
+  [^]               { }
 }
 
 
 <LINE2> {
 
- [^]   { }
+  (\*\/)            {yybegin(YYINITIAL);}
+
+  [^]   { }
 
 }
 
 
 <BLOCK> {
 
- [^]   { }
+  (\*\/)            {yybegin(YYINITIAL);}
+
+  [^]   { }
 
 }

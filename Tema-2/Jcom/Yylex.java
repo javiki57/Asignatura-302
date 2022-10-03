@@ -28,7 +28,7 @@ class Yylex {
    * l is of the form l = 2*k, k a non negative integer
    */
   private static final int ZZ_LEXSTATE[] = {
-     0,  0,  1,  1,  1,  1,  1, 1
+     0,  0,  1,  1,  2,  2,  2, 2
   };
 
   /**
@@ -65,7 +65,8 @@ class Yylex {
   private static final int [] ZZ_CMAP_BLOCKS = zzUnpackcmap_blocks();
 
   private static final String ZZ_CMAP_BLOCKS_PACKED_0 =
-    "\52\0\1\1\4\0\1\2\u01d0\0";
+    "\11\0\1\1\1\2\2\0\1\1\22\0\1\1\11\0"+
+    "\1\3\4\0\1\4\u01d0\0";
 
   private static int [] zzUnpackcmap_blocks() {
     int [] result = new int[512];
@@ -92,10 +93,10 @@ class Yylex {
   private static final int [] ZZ_ACTION = zzUnpackAction();
 
   private static final String ZZ_ACTION_PACKED_0 =
-    "\2\0\2\1\1\2\1\3\1\4";
+    "\3\0\2\1\1\2\1\3\1\1\1\4\1\5\1\6";
 
   private static int [] zzUnpackAction() {
-    int [] result = new int[7];
+    int [] result = new int[11];
     int offset = 0;
     offset = zzUnpackAction(ZZ_ACTION_PACKED_0, offset, result);
     return result;
@@ -120,10 +121,11 @@ class Yylex {
   private static final int [] ZZ_ROWMAP = zzUnpackRowMap();
 
   private static final String ZZ_ROWMAP_PACKED_0 =
-    "\0\0\0\3\0\6\0\11\0\14\0\6\0\6";
+    "\0\0\0\5\0\12\0\17\0\24\0\31\0\17\0\36"+
+    "\0\43\0\17\0\17";
 
   private static int [] zzUnpackRowMap() {
-    int [] result = new int[7];
+    int [] result = new int[11];
     int offset = 0;
     offset = zzUnpackRowMap(ZZ_ROWMAP_PACKED_0, offset, result);
     return result;
@@ -146,11 +148,12 @@ class Yylex {
   private static final int [] ZZ_TRANS = zzUnpackTrans();
 
   private static final String ZZ_TRANS_PACKED_0 =
-    "\2\3\1\4\3\3\4\0\1\5\1\6\1\0\1\7"+
-    "\1\0";
+    "\4\4\1\5\1\6\1\4\1\7\2\6\3\4\1\10"+
+    "\1\4\10\0\1\11\1\12\1\6\2\0\2\6\4\0"+
+    "\1\7\3\0\1\13\1\0";
 
   private static int [] zzUnpackTrans() {
-    int [] result = new int[15];
+    int [] result = new int[40];
     int offset = 0;
     offset = zzUnpackTrans(ZZ_TRANS_PACKED_0, offset, result);
     return result;
@@ -193,10 +196,10 @@ class Yylex {
   private static final int [] ZZ_ATTRIBUTE = zzUnpackAttribute();
 
   private static final String ZZ_ATTRIBUTE_PACKED_0 =
-    "\2\0\1\11\2\1\2\11";
+    "\3\0\1\11\2\1\1\11\2\1\2\11";
 
   private static int [] zzUnpackAttribute() {
-    int [] result = new int[7];
+    int [] result = new int[11];
     int offset = 0;
     offset = zzUnpackAttribute(ZZ_ATTRIBUTE_PACKED_0, offset, result);
     return result;
@@ -615,22 +618,32 @@ class Yylex {
             { 
             }
             // fall through
-          case 5: break;
-          case 2:
-            { yybegin(BLOCK);
-            }
-            // fall through
-          case 6: break;
-          case 3:
-            { yybegin(LINE);
-            }
-            // fall through
           case 7: break;
-          case 4:
-            { yybegin(LINE2);
+          case 2:
+            { JCom.line++;
             }
             // fall through
           case 8: break;
+          case 3:
+            { yybegin(YYINITIAL);
+            }
+            // fall through
+          case 9: break;
+          case 4:
+            { yybegin(BLOCK);
+            }
+            // fall through
+          case 10: break;
+          case 5:
+            { yybegin(LINE);
+            }
+            // fall through
+          case 11: break;
+          case 6:
+            { yybegin(LINE2);
+            }
+            // fall through
+          case 12: break;
           default:
             zzScanError(ZZ_NO_MATCH);
         }

@@ -3,9 +3,9 @@ import java.io.FileReader;
 
 public class JCom {
 
-  public static line = 0;
-  public static line2 = 0;
-  public static block = 0;
+  public static int line = 0;
+  public static int line2 = 0;
+  public static int block = 0;
 
   public static void main(String[] args) {
     
