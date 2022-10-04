@@ -10,20 +10,20 @@ public class Yytoken {
   private String lexema;
 
   public Yytoken(int token, String lexema){
-    this.token = token;
-    this.lexema = lexema;
+     this.token = token;
+     this.lexema = lexema;
   }
 
-  public int getToken() {
-    return token;
+  public int getToken()  {
+     return token;
   }
 
   public String getLexema() {
-    return lexema;
+     return lexema;
   }
-  
-  public String toString(){
-    return "<"+token","+lexema+">";
-  }
+
+  public String toString() {
+     return "<"+token+","+lexema+">";
+  } 
 
 }
